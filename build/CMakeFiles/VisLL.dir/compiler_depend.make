@@ -3538,11 +3538,9 @@ CMakeFiles/VisLL.dir/main.cpp.o: /Users/jacksonadams/Desktop/SDSU/Courses/Fall20
   /Users/jacksonadams/Desktop/SDSU/Courses/Fall2025/CS210/VisLL/imgui/imconfig.h \
   /Users/jacksonadams/Desktop/SDSU/Courses/Fall2025/CS210/VisLL/imgui/imgui.h \
   /Users/jacksonadams/Desktop/SDSU/Courses/Fall2025/CS210/VisLL/imgui/imgui.h \
-  /Users/jacksonadams/Desktop/SDSU/Courses/Fall2025/CS210/VisLL/linkedlist.h \
+  /Users/jacksonadams/Desktop/SDSU/Courses/Fall2025/CS210/VisLL/linkedList.h \
   /usr/local/include/GLFW/glfw3.h
 
-
-/Users/jacksonadams/Desktop/SDSU/Courses/Fall2025/CS210/VisLL/linkedlist.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_time.h:
 
@@ -5849,6 +5847,8 @@ CMakeFiles/VisLL.dir/main.cpp.o: /Users/jacksonadams/Desktop/SDSU/Courses/Fall20
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/auto_ptr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_find_end.h:
+
+/Users/jacksonadams/Desktop/SDSU/Courses/Fall2025/CS210/VisLL/linkedList.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h:
 

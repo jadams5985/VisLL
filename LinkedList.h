@@ -23,14 +23,30 @@ public:
 template<typename T>
 class LinkedList {
 private:
-    Node<T>* head; // The linked list has a pointer that points to the first element
-
+    // keep track of the head and tail at all times!!!
+    Node<T>* head; // The linked list has a pointer to the head so we know where the first element is
+    Node<T>* tail; // The linked list has a pointer to the tail so that we know where the end of the list is
+    size_t length; // make a length so that we can track how many elements are in our list
 public:
-    LinkedList() : head(nullptr) {} // constructor for the list, init the head to a nullptr so it doesn't pick up some garbage val
+    LinkedList() : head(nullptr), tail(nullptr), length(0) {} // constructor for the list, init the head to a nullptr so it doesn't pick up some garbage val
 
     // add an element to the back of the list
     void append(T value) {
+        // check if there are already elements in the list, aka if the list's length > 0 there are elements in the list
+        if (length == 0) {
+            // there are no elements in the list
+            Node<T> n = new Node<T>(value); // make a new node and pass it the value, it's next* is a nullptr
+            head = n; // make the head point to the new node
+            tail = n; // make the tail point to the new node
+        }
+        // there are elements in the list
+        else {
+            // update the 
+            Node<T> n = new Node<T>(value); // make a new node, pass the value in, and it's next* is nullptr
+            Node<T> temp = this->tail;
 
+        }
+        length++;
     }
 
     // add an element to the front of the list

@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named app
+
+# Build rule for target.
+app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app
+.PHONY : app
+
+# fast build rule for target.
+app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
+.PHONY : app/fast
+
+#=============================================================================
 # Target rules for targets named VisLL
 
 # Build rule for target.
@@ -278,6 +291,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisLL.dir/build.make CMakeFiles/VisLL.dir/main.cpp.o
 .PHONY : main.cpp.o
 
@@ -286,6 +300,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisLL.dir/build.make CMakeFiles/VisLL.dir/main.cpp.i
 .PHONY : main.cpp.i
 
@@ -294,6 +309,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisLL.dir/build.make CMakeFiles/VisLL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
@@ -306,6 +322,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... VisLL"
+	@echo "... app"
 	@echo "... backend/imgui_impl_glfw.o"
 	@echo "... backend/imgui_impl_glfw.i"
 	@echo "... backend/imgui_impl_glfw.s"

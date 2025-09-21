@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 # Find packages
 find_package(OpenGL REQUIRED)
 find_package(glfw3 3.3 REQUIRED)
+add_executable(app main.cpp)
+target_link_libraries(app PRIVATE glfw)
 
 # Add executable with all sources manually listed
 add_executable(VisLL
