@@ -1,0 +1,16 @@
+    # Ignore compiled output files
+    *.o
+    *.class
+    *.pyc
+
+    # Ignore build artifacts
+    build/
+    dist/
+
+    # Ignore temporary files
+    *.tmp
+    *~
+
+    # Ignore sensitive information or local configuration
+    .env
+    config.local.js
