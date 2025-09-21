@@ -49,7 +49,19 @@ public:
 
     // add an element to the front of the list
     void addFirst(T value) {
-        
+        Node<T>* n = new Node<T>(value); // make a new pointer node, pass the value. The next points to a nullptr.
+        // check if there are elements in the list or not
+        if (length == 0) {
+            // there are no elements in the list...
+            head = n; // make the head point to the new node
+            tail = n; // make the tail point to the new node
+        }
+        // there is at least one element
+        else {
+            n->next = head; // make the new node point the current head
+            head = n; // make the head of the list point that the new node
+        }
+        length++; // increment the list
     }
 
     // remove the first element of the list
