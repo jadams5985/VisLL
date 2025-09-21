@@ -16,6 +16,7 @@ private:
 
 public:
     Node(T val) : data(val), next(nullptr) {} // constructor for the node that assigns the value to the data, and init the next node to a nullptr
+    ~Node() {}
 };
 
 
@@ -66,12 +67,22 @@ public:
 
     // remove the first element of the list
     void deleteFirst() {
-
+        // check if there are elements in the list before we try to remove any
+        if (length == 0) {
+            return; // there are no elements in the list, just return
+        }
+        // there is a first element, so we can remove it
+        else {
+            Node<T>* temp = head; // make a pointer node that points to the same thing as the head
+            head = head->next; // make the head point to what the first element next*
+            delete temp; // free the memory of the first value
+        }
+        length--; //decrement the length of the list
     }
 
     // remove the last element of the list
     void deleteLast() {
-
+       
     }
 
     // remove an element at a specific index
