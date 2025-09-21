@@ -5,7 +5,7 @@
 
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include "linkedlist.h"
+#include "linkedList.h"
 
 // ✅ Global linked list and label counter
 LinkedList<std::string> ll;
