@@ -32,26 +32,24 @@ public:
 
     // add an element to the back of the list
     void append(T value) {
-        // check if there are already elements in the list, aka if the list's length > 0 there are elements in the list
+        Node<T>* n = new Node<T>(value); // make a new pointer node, pass the value. The next points to a nullptr.
+        // check if the list is empty
         if (length == 0) {
-            // there are no elements in the list
-            Node<T> n = new Node<T>(value); // make a new node and pass it the value, it's next* is a nullptr
+            // there are no elements in the list, make the head point to new node
             head = n; // make the head point to the new node
             tail = n; // make the tail point to the new node
         }
         // there are elements in the list
         else {
-            // update the 
-            Node<T> n = new Node<T>(value); // make a new node, pass the value in, and it's next* is nullptr
-            Node<T> temp = this->tail;
-
+            tail->next = n; // make the last element's next* point to the address of the new node
+            tail = n; // update the tail of the list to new node
         }
-        length++;
+        length++; // increment the list length
     }
 
     // add an element to the front of the list
     void addFirst(T value) {
-
+        
     }
 
     // remove the first element of the list
